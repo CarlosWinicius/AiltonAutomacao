@@ -1,0 +1,122 @@
+/* Header Root Layout */
+.header-root {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  margin-top: 32px;
+  width: 100%;
+  gap: 32px;
+  flex-wrap: nowrap;
+  padding: 0 2vw;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.header-logo-block {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+  flex-shrink: 0;
+}
+
+.header-logo-img {
+  width: 48px;
+  height: 48px;
+  filter: drop-shadow(0 0 12px #16A34A33);
+}
+
+.header-title {
+  font-family: 'Montserrat Black', Montserrat, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: 1.2px;
+  color: #16A34A;
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.header-right-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 0;
+  flex: 1 1 0;
+  overflow: hidden;
+}
+
+.header-company {
+  font-family: 'Montserrat Black', Montserrat, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: 1.2px;
+  color: #16A34A;
+  margin: 0;
+  text-align: right;
+  line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-desc {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 4px;
+  font-weight: 400;
+  font-family: 'Montserrat', Arial, sans-serif;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 1100px) {
+  .header-root {
+    gap: 12px;
+  }
+  .header-company {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .header-root {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .header-company {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .header-root {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0 4vw;
+  }
+  .header-logo-block,
+  .header-right-block {
+    align-items: flex-start;
+    min-width: unset;
+    width: 100%;
+  }
+  .header-company,
+  .header-desc {
+    text-align: left;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+  .header-company {
+    font-size: 1.05rem;
+  }
+  .header-title {
+    font-size: 1.1rem;
+  }
+}
